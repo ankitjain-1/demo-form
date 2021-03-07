@@ -33,7 +33,7 @@ const Form = (props) => {
     city: "",
     postCode: "",
     country: "",
-    customeType: "New",
+    customerType: "New",
     sourceLead: "Facebook",
     comments: "",
   });
@@ -63,6 +63,7 @@ const Form = (props) => {
             <Grid item xs={12} sm={6}>
               <InputLabel id="prefix-label">Prefix</InputLabel>
               <Select
+                name="prefix"
                 value={state.prefix}
                 labelId="prefix-label"
                 id="prefix"
@@ -189,7 +190,7 @@ const Form = (props) => {
               <InputLabel id="customer-type">Customer Type</InputLabel>
               <Select
                 name="customerType"
-                value={state.customeType}
+                value={state.customerType}
                 labelId="customer-type"
                 id="customer-type-select"
                 onChange={(e) => {
@@ -212,7 +213,7 @@ const Form = (props) => {
                 }}
               >
                 <MenuItem value="Facebook">Facebook</MenuItem>
-                <MenuItem value="Facebook">Facebook</MenuItem>
+                <MenuItem value="Google">Google</MenuItem>
               </Select>
             </Grid>
             <Grid item xs={12}>
